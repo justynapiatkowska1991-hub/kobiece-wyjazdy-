@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kobiece Wyjazdy</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fbf8f5;
+    color: #403936;
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, #8b6b5d, #c9aa96);
+    color: white;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+header h1 {
+    font-size: 44px;
+    margin: 0 0 15px;
+}
+
+header p {
+    font-size: 20px;
+    max-width: 700px;
+    margin: auto;
+}
+
+nav {
+    text-align: center;
+    background: white;
+    padding: 15px;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 10px #0001;
+}
+
+nav a {
+    color: #6d5146;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 12px;
+}
+
+section {
+    max-width: 1050px;
+    margin: auto;
+    padding: 55px 20px;
+}
+
+h2 {
+    text-align: center;
+    color: #6d5146;
+    font-size: 30px;
+}
+
+.intro {
+    text-align: center;
+    max-width: 760px;
+    margin: auto;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 22px;
+}
+
+.card {
+    background: white;
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 5px 22px #00000012;
+}
+
+.card h3 {
+    color: #6d5146;
+    font-size: 23px;
+}
+
+.price {
+    font-size: 27px;
+    font-weight: bold;
+    color: #8b6b5d;
+}
+
+.btn {
+    display: inline-block;
+    background: #76564a;
+    color: white;
+    padding: 12px 23px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact {
+    background: #efe5de;
+    border-radius: 22px;
+    text-align: center;
+    padding: 30px;
+}
+
+.contact a.phone {
+    color: #6d5146;
+    font-weight: bold;
+}
+
+footer {
+    text-align: center;
+    padding: 28px;
+    background: #5e4941;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 34px;
+    }
+
+    nav a {
+        margin: 0 5px;
+        font-size: 14px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Kobiece Wyjazdy</h1>
+    <p>
+        Wyjazdy integracyjno-terapeutyczne dla kobiet.
+        Czas na odpoczynek, rozmowę, relacje i zadbanie o siebie.
+    </p>
+</header>
+
+<nav>
+    <a href="#o-nas">O wyjazdach</a>
+    <a href="#wyjazdy">Wyjazdy</a>
+    <a href="#kontakt">Kontakt</a>
+</nav>
+
+<section id="o-nas">
+    <h2>Chwila dla Ciebie</h2>
+
+    <p class="intro">
+        Kobiece Wyjazdy to przestrzeń dla kobiet, które potrzebują
+        zatrzymać się na chwilę, odpocząć od codzienności, poznać nowe osoby
+        i spędzić czas w atmosferze akceptacji oraz wzajemnego wsparcia.
+    </p>
+</section>
+
+<section id="wyjazdy">
+
+    <h2>Najbliższy wyjazd</h2>
+
+    <div class="cards">
+
+        <article class="card">
+
+            <h3>
+                Wyjazd integracyjno-terapeutyczny dla kobiet
+            </h3>
+
+            <p>
+                <b>Termin:</b><br>
+                5–10 października 2026
+            </p>
+
+            <p>
+                <b>Miejsce:</b><br>
+                Roztocze – Hotel Leśna Ostoja
+            </p>
+
+            <p>
+                Kameralny wyjazd z dala od zgiełku.
+                Czas na odpoczynek, rozmowę, integrację
+                oraz zadbanie o własne potrzeby.
+            </p>
+
+            <p>
+                <b>W cenie:</b>
+                noclegi, wyżywienie oraz udział w wyjeździe.
+            </p>
+
+            <p class="price">
+                1800 zł
+            </p>
+
+            <a class="btn" href="tel:+48731503536">
+                Zapytaj o miejsce
+            </a>
+
+        </article>
+
+    </div>
+
+</section>
+
+<section id="kontakt">
+
+    <div class="contact">
+
+        <h2>Skontaktuj się ze mną</h2>
+
+        <p>
+            Telefon:
+            <a class="phone" href="tel:+48731503536">
+                731 503 536
+            </a>
+        </p>
+
+        <a
+            class="btn"
+            href="https://www.facebook.com/share/19SePspsEB/"
+            target="_blank"
+        >
+            Odwiedź Facebooka
+        </a>
+
+    </div>
+
+</section>
+
+<footer>
+    © 2026 Kobiece Wyjazdy
+</footer>
+
+</body>
+</html>

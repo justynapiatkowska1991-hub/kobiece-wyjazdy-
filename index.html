@@ -43,7 +43,79 @@ header p {
     max-width: 750px;
     margin: auto;
 }
+.hero {
+  min-height: 600px;
+  background-image: url('https://raw.githubusercontent.com/justynapiatkowska1991-hub/kobiece-wyjazdy/main/FB_IMG_178371915088.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
 
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+}
+
+.hero-overlay {
+  position: relative;
+  z-index: 1;
+  color: white;
+  padding: 30px 20px;
+  max-width: 900px;
+}
+
+.hero h1 {
+  font-size: 60px;
+  margin-bottom: 15px;
+}
+
+.hero-slogan {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.hero-subtitle {
+  font-size: 21px;
+  margin: 15px 0;
+}
+
+.hero-location {
+  font-size: 19px;
+  font-weight: bold;
+  margin: 25px 0;
+}
+
+.hero-button {
+  display: inline-block;
+  background: #c86b82;
+  color: white;
+  padding: 16px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+@media (max-width: 600px) {
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero-slogan {
+    font-size: 23px;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+  }
+}
 nav {
     background: white;
     padding: 15px;

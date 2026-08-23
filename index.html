@@ -842,6 +842,49 @@ Z miłością dla kobiet ❤️
 
 </footer>
 
+<section id="galeria" style="padding:40px 20px; max-width:1050px; margin:auto; text-align:center;">
+  <h2 style="font-size:32px; color:#b85d82;">📸 Galeria</h2>
+  <p style="font-size:18px; color:#666;">
+    Zobacz miejsce, naturę i chwile, które czekają na Ciebie podczas naszych wyjazdów.
+  </p>
 
+  <div id="gallery" style="
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:15px;
+    margin-top:25px;
+  "></div>
+</section>
+
+<script>
+const gallery = document.getElementById("gallery");
+
+fetch("https://api.github.com/repos/justynapiatkowska1991-hub/kobiece-wyjazdy-/contents/")
+  .then(response => response.json())
+  .then(files => {
+    files
+      .filter(file => /\.(jpg|jpeg|png|webp)$/i.test(file.name))
+      .forEach(file => {
+        const img = document.createElement("img");
+        img.src = file.download_url;
+        img.alt = "Kobiece Wyjazdy";
+        img.style.width = "100%";
+        img.style.height = "250px";
+        img.style.objectFit = "cover";
+        img.style.borderRadius = "15px";
+        img.style.cursor = "pointer";
+        img.style.boxShadow = "0 4px 12px rgba(0,0,0,0.15)";
+
+        img.onclick = () => {
+          window.open(file.download_url, "_blank");
+        };
+
+        gallery.appendChild(img);
+      });
+  })
+  .catch(error => {
+    gallery.innerHTML = "<p>Galeria jest chwilowo niedostępna.</p>";
+  });
+</script>
 </body>
 </html>

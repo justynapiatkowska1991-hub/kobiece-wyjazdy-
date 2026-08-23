@@ -3,241 +3,723 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kobiece Wyjazdy</title>
+
+<title>Kobiece Wyjazdy – wyjazdy dla kobiet</title>
+
+<meta name="description" content="Kobiece Wyjazdy – wyjątkowe wyjazdy integracyjno-terapeutyczne dla kobiet. Odpoczynek, relacje, rozmowa i czas dla siebie.">
 
 <style>
+
 * {
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #fbf8f5;
+    background: #fff8fb;
     color: #403936;
     line-height: 1.6;
 }
 
 header {
-    background: linear-gradient(135deg, #8b6b5d, #c9aa96);
+    background: linear-gradient(135deg, #d65d9d, #8b6b5d);
     color: white;
     text-align: center;
-    padding: 70px 20px;
+    padding: 75px 20px;
 }
 
 header h1 {
-    font-size: 44px;
+    font-size: 48px;
     margin: 0 0 15px;
 }
 
 header p {
     font-size: 20px;
-    max-width: 700px;
+    max-width: 750px;
     margin: auto;
 }
 
 nav {
-    text-align: center;
     background: white;
     padding: 15px;
+    text-align: center;
     position: sticky;
     top: 0;
-    box-shadow: 0 2px 10px #0001;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 nav a {
     color: #6d5146;
     text-decoration: none;
     font-weight: bold;
-    margin: 0 12px;
+    margin: 0 10px;
+    display: inline-block;
+}
+
+nav a:hover {
+    color: #d65d9d;
 }
 
 section {
     max-width: 1050px;
     margin: auto;
-    padding: 55px 20px;
+    padding: 60px 20px;
 }
 
 h2 {
     text-align: center;
     color: #6d5146;
-    font-size: 30px;
+    font-size: 32px;
+    margin-bottom: 30px;
 }
 
 .intro {
     text-align: center;
-    max-width: 760px;
+    max-width: 800px;
     margin: auto;
+    font-size: 18px;
 }
 
 .cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 22px;
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 .card {
     background: white;
-    border-radius: 20px;
-    padding: 28px;
-    box-shadow: 0 5px 22px #00000012;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+    flex: 1;
+    min-width: 280px;
+    max-width: 480px;
 }
 
 .card h3 {
     color: #6d5146;
-    font-size: 23px;
+    font-size: 22px;
 }
 
 .price {
-    font-size: 27px;
+    font-size: 30px;
     font-weight: bold;
-    color: #8b6b5d;
+    color: #d65d9d;
+    text-align: center;
 }
 
-.btn {
+.button {
     display: inline-block;
-    background: #76564a;
+    background: #d65d9d;
     color: white;
-    padding: 12px 23px;
-    border-radius: 30px;
+    padding: 14px 25px;
+    border-radius: 10px;
     text-decoration: none;
     font-weight: bold;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button:hover {
+    background: #b94780;
+}
+
+.center {
+    text-align: center;
+}
+
+.form-box {
+    background: white;
+    max-width: 700px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input,
+textarea,
+select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 20px;
+    font-weight: normal;
+}
+
+.checkbox input {
+    width: auto;
+    margin-top: 5px;
+}
+
+.stars {
+    text-align: center;
+    font-size: 34px;
+    letter-spacing: 5px;
+    margin: 15px 0;
+}
+
+.opinie {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.opinia {
+    background: white;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.08);
+}
+
+.opinia .gwiazdki {
+    color: #e3a82b;
+    font-size: 24px;
+}
+
+.opinia strong {
+    color: #6d5146;
 }
 
 .contact {
-    background: #efe5de;
-    border-radius: 22px;
     text-align: center;
-    padding: 30px;
-}
-
-.contact a.phone {
-    color: #6d5146;
-    font-weight: bold;
+    background: #f9e8f0;
+    border-radius: 20px;
+    padding: 40px 20px;
 }
 
 footer {
-    text-align: center;
-    padding: 28px;
-    background: #5e4941;
+    background: #6d5146;
     color: white;
+    text-align: center;
+    padding: 25px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
+
+    header {
+        padding: 55px 15px;
+    }
+
     header h1 {
-        font-size: 34px;
+        font-size: 36px;
+    }
+
+    header p {
+        font-size: 18px;
     }
 
     nav a {
-        margin: 0 5px;
+        margin: 5px 6px;
         font-size: 14px;
     }
+
+    section {
+        padding: 45px 15px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .card {
+        min-width: 100%;
+    }
+
 }
+
 </style>
 </head>
 
 <body>
 
 <header>
-    <h1>Kobiece Wyjazdy</h1>
-    <p>
-        Wyjazdy integracyjno-terapeutyczne dla kobiet.
-        Czas na odpoczynek, rozmowę, relacje i zadbanie o siebie.
-    </p>
+
+<h1>🌸 Kobiece Wyjazdy</h1>
+
+<p>
+Wyjazdy integracyjno-terapeutyczne dla kobiet.
+<br>
+Czas na odpoczynek, rozmowę, relacje i zadbanie o siebie.
+</p>
+
 </header>
 
+
 <nav>
-    <a href="#o-nas">O wyjazdach</a>
-    <a href="#wyjazdy">Wyjazdy</a>
-    <a href="#zapisy">💗 Zapisy online</a>
-    <a href="#kontakt">Kontakt</a>
+
+<a href="#o-nas">O nas</a>
+
+<a href="#wyjazdy">Wyjazdy</a>
+
+<a href="#opinie">⭐ Opinie</a>
+
+<a href="#zapisy">💗 Zapisy online</a>
+
+<a href="#kontakt">Kontakt</a>
+
 </nav>
 
-<section id="o-nas">
-    <h2>Chwila dla Ciebie</h2>
 
-    <p class="intro">
-        Kobiece Wyjazdy to przestrzeń dla kobiet, które potrzebują
-        zatrzymać się na chwilę, odpocząć od codzienności, poznać nowe osoby
-        i spędzić czas w atmosferze akceptacji oraz wzajemnego wsparcia.
-    </p>
+<section id="o-nas">
+
+<h2>🌷 Chwila dla Ciebie</h2>
+
+<p class="intro">
+
+Kobiece Wyjazdy to przestrzeń dla kobiet, które potrzebują
+zatrzymać się na chwilę, odpocząć od codzienności,
+poznać nowe osoby i spędzić czas w atmosferze akceptacji,
+życzliwości oraz wzajemnego wsparcia.
+
+<br><br>
+
+To czas, aby zwolnić, porozmawiać, pośmiać się,
+zregenerować i przypomnieć sobie, jak ważna jesteś Ty sama.
+
+</p>
+
 </section>
+
 
 <section id="wyjazdy">
 
-    <h2>Najbliższy wyjazd</h2>
+<h2>🧳 Najbliższy wyjazd</h2>
 
-    <div class="cards">
+<div class="cards">
 
-        <article class="card">
+<article class="card">
 
-            <h3>
-                Wyjazd integracyjno-terapeutyczny dla kobiet
-            </h3>
+<h3>
+Wyjazd integracyjno-terapeutyczny dla kobiet
+</h3>
 
-            <p>
-                <b>Termin:</b><br>
-                5–10 października 2026
-            </p>
+<p>
+<b>📅 Termin:</b><br>
+5–10 października 2026
+</p>
 
-            <p>
-                <b>Miejsce:</b><br>
-                Roztocze – Hotel Leśna Ostoja
-            </p>
+<p>
+<b>📍 Miejsce:</b><br>
+Roztocze – Hotel Leśna Ostoja
+</p>
 
-            <p>
-                Kameralny wyjazd z dala od zgiełku.
-                Czas na odpoczynek, rozmowę, integrację
-                oraz zadbanie o własne potrzeby.
-            </p>
+<p>
+<b>🏡 Zakwaterowanie:</b><br>
+Pokoje dwuosobowe z łazienką.
+</p>
 
-            <p>
-                <b>W cenie:</b>
-                noclegi, wyżywienie oraz udział w wyjeździe.
-            </p>
+<p>
+<b>🍽️ W cenie:</b><br>
+Hotel, wyżywienie oraz udział w wyjeździe.
+</p>
 
-            <p class="price">
-                1800 zł
-            </p>
+<p>
+Kameralny wyjazd z dala od zgiełku.
+Czas na odpoczynek, rozmowę, integrację
+oraz zadbanie o własne potrzeby.
+</p>
 
-            <a class="btn" href="tel:+48731503536">
-                Zapytaj o miejsce
-            </a>
+<p class="price">
+1800 zł
+</p>
 
-        </article>
+<div class="center">
 
-    </div>
+<a class="button" href="#zapisy">
+💗 ZAPISZ SIĘ
+</a>
+
+</div>
+
+</article>
+
+</div>
 
 </section>
+
+
+<section id="opinie">
+
+<h2>⭐ Opinie uczestniczek</h2>
+
+<p class="intro">
+
+Poznaj opinie kobiet, które chciały zatrzymać się na chwilę
+i zrobić coś dobrego dla siebie.
+
+</p>
+
+<br>
+
+<div class="opinie">
+
+
+<div class="opinia">
+
+<div class="gwiazdki">
+★★★★★
+</div>
+
+<p>
+„Wspaniały czas, cudowna atmosfera i mnóstwo pozytywnej energii.
+Wróciłam z nową siłą.”
+</p>
+
+<strong>— Uczestniczka wyjazdu</strong>
+
+</div>
+
+
+<div class="opinia">
+
+<div class="gwiazdki">
+★★★★★
+</div>
+
+<p>
+„To był czas tylko dla mnie. Poznałam wspaniałe kobiety
+i naprawdę odpoczęłam.”
+</p>
+
+<strong>— Uczestniczka wyjazdu</strong>
+
+</div>
+
+
+<div class="opinia">
+
+<div class="gwiazdki">
+★★★★★
+</div>
+
+<p>
+„Piękne miejsce, dużo rozmów, śmiechu i wzajemnego wsparcia.
+Chętnie pojadę ponownie.”
+</p>
+
+<strong>— Uczestniczka wyjazdu</strong>
+
+</div>
+
+
+</div>
+
+<br><br>
+
+
+<div class="form-box">
+
+<h3 style="text-align:center;color:#6d5146;">
+💗 Zostaw swoją opinię
+</h3>
+
+<p style="text-align:center;">
+Będzie nam bardzo miło, jeśli podzielisz się
+swoimi wrażeniami z wyjazdu.
+</p>
+
+
+<form
+action="https://formsubmit.co/justynapiatkowska1991@gmail.com"
+method="POST"
+>
+
+<input
+type="hidden"
+name="_subject"
+value="⭐ Nowa opinia – Kobiece Wyjazdy"
+>
+
+<input
+type="hidden"
+name="_captcha"
+value="false"
+>
+
+<input
+type="hidden"
+name="_template"
+value="table"
+>
+
+
+<label for="opinia-imie">
+Imię *
+</label>
+
+<input
+id="opinia-imie"
+type="text"
+name="Imię"
+placeholder="Wpisz swoje imię"
+required
+>
+
+
+<label for="ocena">
+Ocena *
+</label>
+
+<select
+id="ocena"
+name="Ocena"
+required
+>
+
+<option value="">Wybierz ocenę</option>
+<option value="★★★★★ – 5/5">★★★★★ – 5/5</option>
+<option value="★★★★☆ – 4/5">★★★★☆ – 4/5</option>
+<option value="★★★☆☆ – 3/5">★★★☆☆ – 3/5</option>
+<option value="★★☆☆☆ – 2/5">★★☆☆☆ – 2/5</option>
+<option value="★☆☆☆☆ – 1/5">★☆☆☆☆ – 1/5</option>
+
+</select>
+
+
+<label for="tresc-opinii">
+Twoja opinia *
+</label>
+
+<textarea
+id="tresc-opinii"
+name="Opinia"
+placeholder="Napisz kilka słów o swoim wyjeździe..."
+required
+></textarea>
+
+
+<label class="checkbox">
+
+<input
+type="checkbox"
+name="Zgoda na publikację"
+value="TAK"
+required
+>
+
+<span>
+Wyrażam zgodę na publikację mojej opinii
+na stronie Kobiece Wyjazdy. *
+</span>
+
+</label>
+
+
+<br>
+
+<button
+class="button"
+type="submit"
+style="width:100%;"
+>
+⭐ WYŚLIJ OPINIĘ
+</button>
+
+</form>
+
+</div>
+
+</section>
+
+
+<section id="zapisy">
+
+<h2>💗 ZAPISY ONLINE</h2>
+
+<p class="intro">
+
+Zgłoś swój udział w wyjeździe.
+Po otrzymaniu zgłoszenia skontaktujemy się z Tobą.
+
+</p>
+
+<br>
+
+
+<div class="form-box">
+
+<form
+action="https://formsubmit.co/justynapiatkowska1991@gmail.com"
+method="POST"
+>
+
+<input
+type="hidden"
+name="_subject"
+value="💗 Nowe zgłoszenie – Kobiece Wyjazdy"
+>
+
+<input
+type="hidden"
+name="_captcha"
+value="false"
+>
+
+<input
+type="hidden"
+name="_template"
+value="table"
+>
+
+
+<label>
+Imię i nazwisko *
+</label>
+
+<input
+type="text"
+name="Imię i nazwisko"
+placeholder="Imię i nazwisko"
+required
+>
+
+
+<label>
+Numer telefonu *
+</label>
+
+<input
+type="tel"
+name="Telefon"
+placeholder="Numer telefonu"
+required
+>
+
+
+<label>
+Adres e-mail *
+</label>
+
+<input
+type="email"
+name="E-mail"
+placeholder="adres@email.pl"
+required
+>
+
+
+<label>
+Liczba osób *
+</label>
+
+<input
+type="number"
+name="Liczba osób"
+min="1"
+value="1"
+required
+>
+
+
+<label>
+Uwagi
+</label>
+
+<textarea
+name="Uwagi"
+placeholder="Napisz, jeśli masz dodatkowe pytania lub informacje..."
+></textarea>
+
+
+<label class="checkbox">
+
+<input
+type="checkbox"
+name="Zgoda na kontakt"
+value="TAK"
+required
+>
+
+<span>
+Wyrażam zgodę na kontakt w sprawie mojego zgłoszenia. *
+</span>
+
+</label>
+
+
+<br>
+
+<button
+class="button"
+type="submit"
+style="width:100%;"
+>
+💗 WYŚLIJ ZGŁOSZENIE
+</button>
+
+</form>
+
+</div>
+
+</section>
+
 
 <section id="kontakt">
 
-    <div class="contact">
+<div class="contact">
 
-        <h2>Skontaktuj się ze mną</h2>
+<h2>📞 Skontaktuj się ze mną</h2>
 
-        <p>
-            Telefon:
-            <a class="phone" href="tel:+48731503536">
-                731 503 536
-            </a>
-        </p>
+<p>
+Masz pytania dotyczące wyjazdu?
+<br>
+Zadzwoń lub napisz.
+</p>
 
-        <a
-            class="btn"
-            href="https://www.facebook.com/share/19SePspsEB/"
-            target="_blank"
-        >
-            Odwiedź Facebooka
-        </a>
+<p>
 
-    </div>
+<a
+class="button"
+href="tel:+48731503536"
+>
+📱 731 503 536
+</a>
+
+</p>
+
+</div>
 
 </section>
 
+
 <footer>
-    © 2026 Kobiece Wyjazdy
+
+© 2026 Kobiece Wyjazdy
+<br>
+Z miłością dla kobiet ❤️
+
 </footer>
+
 
 </body>
 </html>
